@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waterleaf Homestead – Zanesville, OH</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       color: #2c2c2c;
-      background-color: #f9f5f0;
+      background: url('https://i.imgur.com/zYw5U2e.png'); /* parchment texture */
+      background-size: cover;
+      background-attachment: fixed;
       line-height: 1.6;
     }
     h1, h2, h3 {
@@ -26,21 +27,22 @@
     a:hover {
       text-decoration: underline;
     }
-
-    /* Top Header */
     #top-header {
-      background-color: #5a3e2b;
+      background: url('https://i.imgur.com/VC0q6vb.png'); /* wood grain */
+      background-size: cover;
       color: #fff;
       text-align: center;
       padding: 1rem;
     }
     #top-header h1 {
-      font-size: 2.5em;
+      font-size: 2.7em;
+      text-shadow: 2px 2px 4px #000;
     }
     #top-header .tagline {
       font-family: 'Lato', sans-serif;
       font-size: 1em;
       font-weight: 400;
+      text-shadow: 1px 1px 3px #000;
     }
     #top-header .tagline img {
       width: 20px;
@@ -48,10 +50,8 @@
       margin-right: 6px;
       opacity: 0.9;
     }
-
-    /* Navigation */
     nav {
-      background-color: #f4ece3;
+      background-color: #e3d4b8;
       border-top: 4px solid #7b5e3b;
       text-align: center;
       padding: 0.5rem 0;
@@ -63,26 +63,27 @@
     nav a:hover {
       color: #6b8e23;
     }
-
-    /* Hero Image */
     .hero {
       position: relative;
       background: url('https://images.unsplash.com/photo-1602526216434-b2607fdf2067?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
-      color: #ffffff;
+      color: #fff;
       text-align: center;
-      padding: 5rem 1rem;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .hero::before {
       content: "";
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.4);
     }
     .hero-content {
       position: relative;
       z-index: 1;
       max-width: 800px;
-      margin: 0 auto;
+      padding: 1rem;
     }
     .hero-content h2 {
       font-family: 'Lato', sans-serif;
@@ -91,9 +92,9 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       line-height: 1.4;
+      color: #fff;
+      text-shadow: 2px 2px 5px #000;
     }
-
-    /* Section Base */
     section {
       padding: 3rem 1rem;
       max-width: 1000px;
@@ -105,16 +106,14 @@
       margin-bottom: 1rem;
       text-transform: uppercase;
     }
-
-    /* Product Grid */
     .available-items {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
     .item-card {
-      background: #fff;
-      border: 1px solid #e0dcd5;
+      background: #fff8e7;
+      border: 1px solid #c8b59d;
       border-radius: 4px;
       padding: 1rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -131,8 +130,6 @@
       font-style: italic;
       color: #555;
     }
-
-    /* Reserve List */
     .reserve-list {
       list-style: none;
       padding: 0;
@@ -150,7 +147,6 @@
       color: #6b8e23;
       font-size: 0.8em;
     }
-
     .reserve-button {
       display: inline-block;
       background-color: #6b8e23;
@@ -163,16 +159,12 @@
     .reserve-button:hover {
       background-color: #5a7619;
     }
-
-    /* Contact */
     .contact-info {
       text-align: center;
     }
     .contact-info p {
       margin: 0.5em 0;
     }
-
-    /* Footer */
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -183,8 +175,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Top Header -->
   <div id="top-header">
     <h1>Waterleaf Homestead</h1>
     <p class="tagline">
@@ -193,7 +183,6 @@
     </p>
   </div>
 
-  <!-- Navigation -->
   <nav>
     <a href="#available">Shop</a>
     <a href="#mission">About</a>
@@ -201,14 +190,12 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <h2>American-Raised Meat &amp; Produce<br>From Our Family to Yours</h2>
     </div>
   </header>
 
-  <!-- What's Available -->
   <section id="available">
     <h2>What's Available</h2>
     <div class="available-items">
@@ -236,14 +223,12 @@
     </div>
   </section>
 
-  <!-- Mission -->
   <section id="mission">
     <h2>Our Mission</h2>
     <p>We are a small, no-compromise family homestead in Southeast Ohio. We raise turkeys, chickens, and produce the way it should be done — slow, humane, clean, and connected to the land. No corporate fluff, just real food for real people.</p>
     <p>As a 100% disabled veteran, I’m proud to run Waterleaf Homestead with honesty and hard work. Everything we grow or raise is handled with care, inspected when required, and delivered with integrity.</p>
   </section>
 
-  <!-- How to Reserve -->
   <section id="reserve">
     <h2>How to Reserve</h2>
     <ul class="reserve-list">
@@ -257,7 +242,6 @@
     </p>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
@@ -268,10 +252,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 Waterleaf Homestead. All rights reserved.
   </footer>
-
 </body>
 </html>
