@@ -6,13 +6,12 @@
   <title>Waterleaf Homestead – Zanesville, OH</title>
   <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       color: #2c2c2c;
-      background-color: #f9f5f0;
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      background-repeat: repeat;
+      background: #f9f5f0 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
       line-height: 1.6;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -24,46 +23,43 @@
       color: #5a3e2b;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
+
     #top-header {
-      background-color: #5a3e2b;
-      background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-      background-repeat: repeat;
+      background: #5a3e2b url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
       text-align: center;
       padding: 1rem;
-      color: #fff;
+      color: white;
     }
     #top-header h1 {
       font-size: 2.5em;
-      margin-bottom: 0.2em;
+      margin-bottom: .2em;
     }
     #top-header .tagline {
-      font-family: 'Lato', sans-serif;
-      font-size: 1em;
       font-weight: 400;
+      font-size: 1em;
     }
     #top-header .tagline img {
       width: 24px;
       vertical-align: middle;
-      margin-right: 0.3em;
-      opacity: 0.8;
+      margin-right: .3em;
+      opacity: .8;
     }
+
     nav {
-      background-color: #f4ece3;
+      background: #f4ece3;
       border-top: 4px solid #7b5e3b;
       text-align: center;
-      padding: 0.5rem 0;
+      padding: .5rem 0;
     }
     nav a {
       margin: 0 1.5rem;
       font-weight: 700;
       color: #5a3e2b;
+      text-decoration: none;
     }
-    nav a:hover {
-      color: #6b8e23;
-    }
+    nav a:hover { color: #6b8e23; }
+
     .hero {
       position: relative;
       background: url('./hero.jpg') center center/cover no-repeat;
@@ -75,11 +71,10 @@
       text-align: center;
     }
     .hero::before {
-      content: "";
+      content: '';
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.4);
     }
     .hero-content {
       position: relative;
@@ -88,15 +83,14 @@
       padding: 1rem;
     }
     .hero-content h2 {
-      font-family: 'Lato', sans-serif;
       font-size: 2.2em;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
       line-height: 1.4;
-      color: #fff;
       text-shadow: 2px 2px 5px #000;
     }
+
     section {
       padding: 3rem 1rem;
       max-width: 1000px;
@@ -110,7 +104,7 @@
     }
     .available-items {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
       gap: 1.5rem;
     }
     .item-card {
@@ -120,56 +114,45 @@
       padding: 1rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .item-card p {
-      font-size: 0.95em;
-      margin: 0.4em 0;
-    }
-    .item-card p span {
-      font-weight: bold;
-      color: #5a3e2b;
-    }
-    .item-card .note {
-      font-style: italic;
-      color: #555;
-    }
+    .item-card p { margin: .4em 0; font-size: .95em; }
+    .item-card p span { font-weight: bold; color: #5a3e2b; }
+    .item-card .note { font-style: italic; color: #555; }
+
     .reserve-list {
       list-style: none;
       padding: 0;
       margin: 1rem 0 2rem;
     }
     .reserve-list li {
-      padding-left: 1.5em;
-      margin-bottom: 0.5rem;
       position: relative;
+      padding-left: 1.5em;
+      margin-bottom: .5rem;
     }
     .reserve-list li::before {
       content: "■";
       position: absolute;
-      left: 0;
+      left:0;
       color: #6b8e23;
-      font-size: 0.8em;
+      font-size: .8em;
     }
+
     .reserve-button {
       display: inline-block;
-      background-color: #6b8e23;
-      color: white;
-      padding: 0.75rem 1.5rem;
+      background: #6b8e23;
+      color: #fff;
+      padding: .75rem 1.5rem;
       border-radius: 4px;
       font-weight: bold;
       text-transform: uppercase;
+      text-decoration: none;
     }
-    .reserve-button:hover {
-      background-color: #5a7619;
-    }
-    .contact-info {
-      text-align: center;
-    }
-    .contact-info p {
-      margin: 0.5em 0;
-    }
+    .reserve-button:hover { background: #5a7619; }
+    .contact-info { text-align: center; }
+    .contact-info p { margin: .5em 0; }
+
     footer {
       text-align: center;
-      font-size: 0.9em;
+      font-size: .9em;
       color: #888;
       padding: 1rem;
       margin-top: 2rem;
@@ -199,18 +182,18 @@
   </header>
 
   <section id="available">
-    <h2>What's Available</h2>
+    <h2>What’s Available</h2>
     <div class="available-items">
       <div class="item-card">
         <h3>Whole Turkeys</h3>
         <p><span>$6.25/lb</span> | ODA-Inspected</p>
         <p>Only 3 available for 2025 – Pickup Aug 11 (28–35 lb each)</p>
-        <p class="note">"Feast Bird. Holiday King. Crown Jewel."</p>
+        <p class="note">“Feast Bird. Holiday King. Crown Jewel.”</p>
       </div>
       <div class="item-card">
         <h3>Cut-Up Turkeys</h3>
         <p><span>$65</span> flat | Whole bird cut into parts</p>
-        <p>Includes giblets, vacuum sealed for freshness.</p>
+        <p>Includes giblets, vacuum­sealed for freshness.</p>
       </div>
       <div class="item-card">
         <h3>Pastured Chicken</h3>
@@ -220,7 +203,7 @@
       <div class="item-card">
         <h3>Farm-Fresh Produce &amp; Eggs</h3>
         <p>Eggs, tomatoes, greens, root veggies, herbs &amp; more.</p>
-        <p>Local pickup available weekly during harvest season.</p>
+        <p>Local pickup weekly during harvest season.</p>
       </div>
     </div>
   </section>
@@ -228,7 +211,7 @@
   <section id="mission">
     <h2>Our Mission</h2>
     <p>We are a small, no-compromise family homestead in Southeast Ohio. We raise turkeys, chickens, and produce the way it should be done — slow, humane, clean, and connected to the land. No corporate fluff, just real food for real people.</p>
-    <p>As a 100% disabled veteran, I’m proud to run Waterleaf Homestead with honesty and hard work. Everything we grow or raise is handled with care, inspected when required, and delivered with integrity.</p>
+    <p>As a time tested veteran, I’m proud to run Waterleaf Homestead with honesty and hard work. Everything we grow or raise is handled with care, inspected when required, and delivered with integrity.</p>
   </section>
 
   <section id="reserve">
@@ -236,8 +219,8 @@
     <ul class="reserve-list">
       <li>$50 deposit holds your turkey reservation.</li>
       <li>Limited availability – first come, first served.</li>
-      <li>Pickup date: August 11, 2025 at our farm.</li>
-      <li>Contact us to inquire about chickens and weekly produce.</li>
+      <li>Pickup date: Week of August 11, 2025 at our farm.</li>
+      <li>Contact us to inquire about chickens & weekly produce.</li>
     </ul>
     <p class="contact-info">
       <a href="#contact" class="reserve-button">Reserve Now</a>
@@ -248,8 +231,8 @@
     <h2>Contact Us</h2>
     <div class="contact-info">
       <p>Interested in our farm products or have questions? We'd love to hear from you.</p>
-      <p><strong>Email:</strong> <a href="mailto:waterleafhomestead@example.com">waterleafhomestead@example.com</a></p>
-      <p><strong>Phone:</strong> (740) 555-1234</p>
+      <p><strong>Email:</strong> <a href="mailto:matthew.lincicome@outlook.com">waterleafhomestead@example.com</a></p>
+      <p><strong>Phone:</strong> (614) 614-0888</p>
       <p>Zanesville, OH 43701</p>
     </div>
   </section>
