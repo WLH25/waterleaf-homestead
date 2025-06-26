@@ -1,149 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Waterleaf Homestead | Veteran-Owned Farm</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waterleaf Homestead – Zanesville, OH</title>
+  <!-- Google Fonts: Decorative and body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Base Styles */
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background: #e7ddca;
-      color: #2e2b27;
+      font-family: 'Lato', sans-serif;
+      color: #2c2c2c;
+      background-color: #f9f5f0;  /* warm light cream background */
+      line-height: 1.6;
     }
-    header {
-      background: url('https://images.unsplash.com/photo-1585407862343-ecce5c2000e2?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      height: 480px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      font-size: 3.2em;
+    h1, h2, h3, h4, h5, h6 {
       margin: 0;
-      text-shadow: 2px 2px 6px #000;
+      font-family: 'Rancho', cursive; /* decorative brush script for headings */
+      color: #5a3e2b;                 /* deep brown for headings */
     }
-    header p {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-top: 8px;
-      text-shadow: 1px 1px 3px #000;
+    p {
+      margin: 0 0 1em;
     }
-    nav {
-      background: #dfccb0;
-      padding: 14px;
+    a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top Header Bar with site title and tagline */
+    #top-header {
+      background-color: #5a3e2b;  /* dark brown background for contrast */
       text-align: center;
+      padding: 1rem;
+      color: #fff;
+    }
+    #top-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    #top-header .tagline {
+      font-family: 'Lato', sans-serif; /* use body font for tagline for readability */
+      font-size: 1em;
+      font-weight: 400;
+      margin: 0;
+    }
+    #top-header .tagline img {
+      width: 24px;
+      vertical-align: middle;
+      margin-right: 0.3em;
+      opacity: 0.8;  /* slightly reduce opacity for a subtle effect */
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #f4ece3; /* light beige for nav background */
+      border-top: 4px solid #7b5e3b; /* decorative thick border in brown */
+      text-align: center;
+      padding: 0.5rem 0;
     }
     nav a {
-      margin: 0 18px;
-      text-decoration: none;
-      color: #2e2b27;
-      font-weight: bold;
-    }
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #f9f1e4;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      border-bottom: 2px solid #b89f7d;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card {
-      flex: 1 1 250px;
-      padding: 15px;
-      border: 2px solid #c7aa87;
-      border-radius: 8px;
-      background: #fff7e9;
-    }
-    .btn {
       display: inline-block;
-      background: #6c4f1d;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      margin-top: 20px;
+      margin: 0 1.5rem;
+      font-weight: 700;
+      color: #5a3e2b;
     }
-    footer {
-      background: #4a3a24;
-      color: white;
+    nav a:hover {
+      color: #6b8e23; /* olive green hover color */
+    }
+
+    /* Hero Section with background image and overlay text */
+    .hero {
+      position: relative;
+      background: url('https://source.unsplash.com/JQdhd6SbQTM/1920x1080') center center/cover no-repeat;
+      /* ^ Replace the above URL with your chosen header image (free farm photo) */
+      color: #ffffff;
       text-align: center;
-      padding: 20px;
-      margin-top: 50px;
+      padding: 4rem 1rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* dark overlay to improve text visibility */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-content h2 {
+      font-family: 'Lato', sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 1.75em;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #5a3e2b;
+      text-transform: uppercase;
+    }
+
+    /* What's Available: product grid */
+    .available-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .item-card {
+      background: #fff;
+      border: 1px solid #e0dcd5;
+      border-radius: 4px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .item-card h3 {
+      font-size: 1.2em;
+      margin-bottom: 0.5rem;
+      font-family: 'Rancho', cursive;
+      color: #5a3e2b;
+    }
+    .item-card p {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95em;
+      margin: 0.3em 0;
+    }
+    .item-card p span {
+      font-weight: 700;
+      color: #5a3e2b;
+    }
+    .item-card .note {
+      font-style: italic;
+      color: #555;
+    }
+
+    /* How to Reserve: list and button */
+    .reserve-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+    }
+    .reserve-list li {
+      padding-left: 1.5em;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    .reserve-list li::before {
+      content: "■";  /* square bullet */
+      position: absolute;
+      left: 0;
+      color: #6b8e23;
+      font-size: 0.8em;
+      line-height: 1.2;
+    }
+    .reserve-button {
+      display: inline-block;
+      background-color: #6b8e23; /* olive green */
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .reserve-button:hover {
+      background-color: #5a7619;
+    }
+
+    /* Contact section */
+    .contact-info p {
+      font-size: 1em;
+      margin: 0.5em 0;
+    }
+    .contact-info strong {
+      color: #5a3e2b;
+    }
+
+    /* Footer (optional: could include a footer bar if needed) */
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Waterleaf Homestead</h1>
-    <p>Veteran-Owned | Zanesville, OH | No Cages. No Fillers. Just Real Food.</p>
-  </header>
 
+  <!-- Top header with site title and veteran-owned tagline -->
+  <div id="top-header">
+    <h1>Waterleaf Homestead</h1>
+    <p class="tagline">
+      <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" alt="US flag">
+      Veteran-Owned &nbsp;|&nbsp; Zanesville, OH &nbsp;|&nbsp; No Cages. No Fillers. Just Real Food.
+    </p>
+  </div>
+
+  <!-- Navigation bar -->
   <nav>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-    <a href="#order">Order</a>
+    <a href="#available">Shop</a>
+    <a href="#mission">About</a>
+    <a href="#reserve">Order</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section class="section" id="shop">
-    <h2>What’s Available</h2>
-    <div class="grid">
-      <div class="card">
+  <!-- Hero image section with overlay text -->
+  <header class="hero">
+    <div class="hero-content">
+      <h2>American-Raised Meat &amp; Produce<br>From Our Family to Yours</h2>
+    </div>
+  </header>
+
+  <!-- What's Available Section -->
+  <section id="available">
+    <h2>What's Available</h2>
+    <div class="available-items">
+      <!-- Whole Turkeys card -->
+      <div class="item-card">
         <h3>Whole Turkeys</h3>
-        <p><strong>$6.26/lb</strong><br>ODA Inspected<br>Only 5 available 2025<br>Pickup August<br><em>Feast Bird, Holiday King, Crown Jewel.</em></p>
+        <p><span>$6.25/lb</span> &nbsp;|&nbsp; ODA-Inspected</p>
+        <p>Only 3 available for 2025 &ndash; Pickup Aug 11 (28–35 lb each)</p>
+        <p class="note">"Feast Bird. Holiday King. Crown Jewel."</p>
       </div>
-      <div class="card">
+      <!-- Cut-Up Turkeys card -->
+      <div class="item-card">
         <h3>Cut-Up Turkeys</h3>
-        <p>$65 flat<br>Includes giblets, vacuum sealed</p>
+        <p><span>$65</span> flat &nbsp;|&nbsp; Whole bird cut into parts</p>
+        <p>Includes giblets, vacuum sealed for freshness.</p>
       </div>
-      <div class="card">
+      <!-- Pastured Chicken card -->
+      <div class="item-card">
         <h3>Pastured Chicken</h3>
-        <p>Whole or by the piece<br>Eggs, tomatoes, greens, root veg, herbs & more</p>
+        <p>Whole or by the piece, raised Aug–Oct 2025.</p>
+        <p>Available fresh in Fall 2025 (limited supply).</p>
+      </div>
+      <!-- Farm Produce & Eggs card -->
+      <div class="item-card">
+        <h3>Farm-Fresh Produce &amp; Eggs</h3>
+        <p>Eggs, tomatoes, greens, root veggies, herbs &amp; more.</p>
+        <p>Local pickup available weekly during harvest season.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
+  <!-- Our Mission Section -->
+  <section id="mission">
     <h2>Our Mission</h2>
-    <p>We’re a small, no-compromise family homestead rooted in Southeast Ohio. We raise turkeys, chickens, and produce the way it should be done — slow, humane, clean, and connected to the land. No corporate fluff, just real food for real people.</p>
+    <p>We are a small, no-compromise family homestead in Southeast Ohio. We raise turkeys, chickens, and produce the way it should be done &mdash; slow, humane, clean, and connected to the land. No corporate fluff, just real food for real people.</p>
     <p>As a 100% disabled veteran, I’m proud to run Waterleaf Homestead with honesty and hard work. Everything we grow or raise is handled with care, inspected when required, and delivered with integrity.</p>
   </section>
 
-  <section class="section" id="order">
+  <!-- How to Reserve Section -->
+  <section id="reserve">
     <h2>How to Reserve</h2>
-    <ul>
-      <li>🦃 $50 deposit holds your turkey</li>
-      <li>💳 Pay via Cash, Venmo, CashApp, or PayPal</li>
-      <li>📍 Pickup in Zanesville, Ohio</li>
+    <ul class="reserve-list">
+      <li>$50 deposit holds your turkey reservation.</li>
+      <li>Limited availability – first come, first served.</li>
+      <li>Pickup date for turkeys: August 11, 2025 at our farm.</li>
+      <li>Contact us to inquire about chickens and weekly produce.</li>
     </ul>
-    <a class="btn" href="#contact">Reserve Now</a>
+    <p style="text-align: center;">
+      <a href="#contact" class="reserve-button">Reserve Now</a>
+    </p>
   </section>
 
-  <section class="section" id="contact">
+  <!-- Contact Us Section -->
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Matthew Lincicome</strong><br>
-    Email: <a href="mailto:matthew.lincicome@yahoo.com">matthew.lincicome@yahoo.com</a></p>
+    <div class="contact-info" style="text-align: center;">
+      <p>Interested in our farm products or have questions? We'd love to hear from you.</p>
+      <p><strong>Email:</strong> <a href="mailto:waterleafhomestead@example.com">waterleafhomestead@example.com</a></p>
+      <p><strong>Phone:</strong> (740) 555-1234</p>
+      <p>Zanesville, OH 43701</p>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Waterleaf Homestead — All rights reserved.</p>
+    &copy; 2025 Waterleaf Homestead. All rights reserved.
   </footer>
+
 </body>
 </html>
