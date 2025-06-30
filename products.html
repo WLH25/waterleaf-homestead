@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – Waterleaf Homestead</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      color: #2c2c2c;
+      background: #f9f5f0 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Rancho', cursive;
+      color: #5a3e2b;
+    }
+    a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
 
+    #top-header {
+      background: #5a3e2b url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+    }
+    #top-header h1 {
+      font-size: 3em;
+      margin-bottom: .2em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      color: #5a9587;
+    }
+    #top-header .tagline {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+    #top-header .tagline img {
+      width: 30px;
+      vertical-align: middle;
+      margin-right: .4em;
+      opacity: .95;
+    }
+
+    nav {
+      background: #f4ece3;
+      border-top: 4px solid #7b5e3b;
+      text-align: center;
+      padding: .5rem 0;
+    }
+    nav a {
+      margin: 0 1.5rem;
+      font-weight: 700;
+      color: #5a3e2b;
+    }
+    nav a:hover { color: #6b8e23; }
+
+    .hero {
+      position: relative;
+      background: url('./farmers_market.jpg') center center/cover no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 1rem;
+    }
+    .hero-content h2 {
+      font-size: 2.5em;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px #000;
+      color: #fff8dc;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff8ee;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      border: 2px solid #e0c7a9;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      color: #5a3e2b;
+      border-bottom: 2px solid #d8b98c;
+      padding-bottom: .5rem;
+    }
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.25rem;
+    }
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+    .coming-soon {
+      margin-top: 3rem;
+      font-style: italic;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div id="top-header">
+    <h1>Waterleaf Homestead</h1>
+    <p class="tagline">
+      <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" alt="US flag">
+      Veteran-Owned &nbsp;|&nbsp; Zanesville, OH &nbsp;|&nbsp; Honest Food, No Compromise
+    </p>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h2>Real Food. Raised Right.</h2>
+    </div>
+  </header>
+
+  <section>
+    <h2>Current Offerings – 2025</h2>
+    <ul>
+      <li><strong>Whole Turkey (ODA Inspected):</strong> $6.25/lb – 3 available (28–35 lbs each)</li>
+      <li><strong>Cut-Up Turkey (Vacuum Sealed):</strong> $65 flat</li>
+      <li><strong>Pastured Chicken:</strong> Available by piece or whole – raised Aug–Oct</li>
+      <li><strong>Farm Fresh Eggs:</strong> Available during peak laying season</li>
+      <li><strong>Seasonal Produce:</strong> Tomatoes, greens, root vegetables, herbs</li>
+    </ul>
+
+    <h2>Refund Policy</h2>
+    <p>All deposits are non-refundable except in cases where the farm is unable to fulfill the order. If a customer cancels, the deposit will be retained due to the cost of feed and care allocated to the birds. We appreciate your understanding and support of our no-compromise approach to raising healthy, pasture-raised food.</p>
+
+    <div class="coming-soon">
+      <h3>Coming in 2026</h3>
+      <p>Small batch dairy (raw milk, butter, yogurt), farm tours, and hands-on learning experiences.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Waterleaf Homestead. All rights reserved.</p>
+  </footer>
+</body>
+</html>
