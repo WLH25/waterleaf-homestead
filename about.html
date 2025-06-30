@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waterleaf Homestead – Zanesville, OH</title>
+  <title>About Us | Waterleaf Homestead</title>
   <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
@@ -25,77 +25,36 @@
     }
     a:hover { text-decoration: underline; }
 
-    #top-header {
-      background: #5a3e2b url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
-      text-align: center;
-      padding: 1rem;
-      color: white;
-    }
-    #top-header h1 {
-      font-size: 3.2em;
-      margin-bottom: .2em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-      color: #5a9587;
-    }
-    #top-header .tagline {
-      font-weight: 400;
-      font-size: 1.35em;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-    }
-    #top-header .tagline img {
-      width: 34px;
-      vertical-align: middle;
-      margin-right: .4em;
-      opacity: .95;
-    }
-
-    nav {
-      background: #f4ece3;
-      border-top: 4px solid #7b5e3b;
-      text-align: center;
-      padding: .5rem 0;
-    }
-    nav a {
-      margin: 0 1.5rem;
-      font-weight: 700;
-      color: #5a3e2b;
-      text-decoration: none;
-    }
-    nav a:hover { color: #6b8e23; }
-
     .hero {
       position: relative;
-      background: url('./new_hero.jpg') center center/cover no-repeat;
-      min-height: 100vh;
+      background: url('./Boots on porch.jpg') center center/cover no-repeat;
+      min-height: 75vh;
       display: flex;
       align-items: flex-end;
       justify-content: center;
       color: white;
       text-align: center;
-      padding-bottom: 4rem;
+      padding-bottom: 2rem;
       box-sizing: border-box;
     }
     .hero::before {
       content: '';
       position: absolute;
       top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,0,0.25);
+      background: rgba(0,0,0,0.35);
       z-index: 0;
     }
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 800px;
+      max-width: 900px;
       padding: 1rem;
     }
     .hero-content h2 {
-      font-size: 2.8em;
+      font-size: 2.2em;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      line-height: 1.4;
-      text-shadow: 4px 4px 6px rgba(0,0,0,0.8);
-      color: #fff8dc;
+      font-style: italic;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
 
     section {
@@ -116,47 +75,26 @@
       border-bottom: 2px solid #d8b98c;
       padding-bottom: .5rem;
     }
-    section p {
+    section p, section ul {
       margin-bottom: 1em;
       font-size: 1.05em;
     }
     section strong {
       color: #4d3826;
     }
-    .about-image {
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .about-image img {
-      max-width: 100%;
+    .image-bottom {
+      display: block;
+      max-width: 90%;
+      margin: 3rem auto 0;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .about-image-caption {
-      margin-top: 1rem;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #5a3e2b;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 <body>
-  <div id="top-header">
-    <h1>Waterleaf Homestead</h1>
-    <p class="tagline">
-      <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" alt="US flag">
-      Veteran-Owned &nbsp;|&nbsp; Zanesville, OH &nbsp;|&nbsp; No Cages. No Fillers. Just Real Food.
-    </p>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#">About</a>
-  </nav>
-
   <header class="hero">
     <div class="hero-content">
-      <h2>American-Raised Meat &amp; Produce<br>From Our Family to Yours</h2>
+      <h2>"Even the roughest beginnings can lead to the most beautiful places."</h2>
     </div>
   </header>
 
@@ -177,16 +115,8 @@
     <p>This farm exists to show that even the roughest beginnings can lead to the most beautiful places. That scars can be seeds. That pain can become peace.</p>
     <p>And that there is always light — even when the world feels dark.</p>
     <p><strong>So if you are looking for food that feeds your body, stories that feed your soul, or just a place to feel real again… welcome.</strong></p>
-    <p><strong>You belong here. This is Waterleaf Homestead. And we are glad you found us.</strong></p>
-
-    <div class="about-image">
-      <img src="family_pic.jpg" alt="The Lincicome family smiling together on their homestead">
-      <p class="about-image-caption">This is us. This is Waterleaf.</p>
-    </div>
+    <p><strong>You belong here.</strong> This is Waterleaf Homestead. And we are glad you found us.</p>
+    <img src="family_pic.jpg" alt="Our Family" class="image-bottom">
   </section>
-
-  <footer>
-    <p>&copy; 2025 Waterleaf Homestead. All rights reserved.</p>
-  </footer>
 </body>
 </html>
