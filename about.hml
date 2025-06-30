@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Waterleaf Homestead</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: #f9f5f0;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      font-family: 'Rancho', cursive;
+      color: #5a3e2b;
+      text-align: center;
+    }
+    .content {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff8ee;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      border: 2px solid #e0c7a9;
+    }
+    p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+    }
+    strong {
+      color: #4d3826;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Welcome to Waterleaf Homestead</h1>
+    <p><strong>Zanesville, Ohio • Muskingum County • Appalachian Built</strong></p>
+    <p>This is more than a farm. It is a second chance. A deep breath. A promise kept.</p>
+    <p>We are the Lincicome family — Appalachian born, veteran built, and proud to call Muskingum County home. Our journey did not begin with land or money or ease. It began with hardship that most would not see behind our smiles. Poverty. Homelessness. Violence. Silence. We moved house to house, living in hand-me-downs, scraping by on little more than hope, never staying anywhere long enough to grow roots. But deep down, we always believed we could rise.</p>
+    <p>By the time I was seven years old, I already knew life had to change. I made myself a promise — my future kids would never live the way I did. I would outwork every obstacle and climb out of that quicksand no matter what.</p>
+    <p>The military gave me structure. It gave me family. Most of all, it gave me a new beginning. I proudly served as a soldier in the 10th Mountain Division, where I learned to embrace the suck, push through hardship, and stand shoulder to shoulder with brothers who understood struggle like I did. That time changed me. It hardened the right parts and softened others. It gave me tools to fight back against the past.</p>
+    <p>But life after service came with its own battles. Divorce. Distance from my kids. Mental health spirals. Addiction. There were moments I did not know if I would make it out. But I made a decision to start over. I left the uniform behind and stepped into a new life. I remarried. I healed. I rebuilt. I found peace in the dirt and meaning in the work.</p>
+    <p>Today, we live on land that we shaped with our own hands. Every fence post. Every coop. Every morning chore. Built not with money, but with grit, calluses, and purpose. This farm is not a business. It is a legacy. A declaration that we do not just survive. We rise.</p>
+
+    <h2>Our Mission</h2>
+    <p>We created Waterleaf Homestead to raise honest food, grow strong families, and give hope to anyone still in the fight.</p>
+    <p>We know what it is like to feel forgotten, alone, and like the deck is stacked against you. But we also know what happens when someone refuses to give up. This place is proof.</p>
+    <p>We are not rich in dollars. We are rich in love, in land, in laughter, and in the rhythm of a life lived on purpose. Our wealth is measured in the meals we grow, the memories we make, and the people we help along the way.</p>
+    <p>This farm exists to show that even the roughest beginnings can lead to the most beautiful places. That scars can be seeds. That pain can become peace.</p>
+    <p>And that there is always light — even when the world feels dark.</p>
+    <p><strong>So if you are looking for food that feeds your body, stories that feed your soul, or just a place to feel real again… welcome.</strong></p>
+    <p><strong>You belong here.<br>This is Waterleaf Homestead.<br>And we are glad you found us.</strong></p>
+  </div>
+</body>
+</html>
 
