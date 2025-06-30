@@ -74,7 +74,6 @@
       text-align: center;
       padding-bottom: 4rem;
       box-sizing: border-box;
-      border: none;
     }
     .hero::before {
       content: '';
@@ -100,74 +99,39 @@
     }
 
     section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
+      padding: 3rem 2rem;
+      max-width: 1100px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      background: #fff8ee;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      border: 2px solid #e0c7a9;
     }
     section h2 {
       text-align: center;
-      font-size: 1.75em;
-      margin-bottom: 1rem;
+      font-size: 2em;
+      margin-bottom: 1.25rem;
       text-transform: uppercase;
       color: #5a3e2b;
+      border-bottom: 2px solid #d8b98c;
+      padding-bottom: .5rem;
     }
-    .available-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 1.5rem;
+    section p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
     }
-    .item-card {
-      background: #fff8e7;
-      border: 1px solid #c8b59d;
-      border-radius: 4px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    section strong {
+      color: #4d3826;
     }
-    .item-card p { margin: .4em 0; font-size: .95em; }
-    .item-card p span { font-weight: bold; color: #5a3e2b; }
-    .item-card .note { font-style: italic; color: #555; }
-
-    .reserve-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 2rem;
+    .decorated-paragraph {
+      padding: 1.5rem;
+      border-left: 5px solid #c9a86f;
+      background: #fefaf4;
+      margin-bottom: 2rem;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.04);
     }
-    .reserve-list li {
-      position: relative;
-      padding-left: 1.5em;
-      margin-bottom: .5rem;
-    }
-    .reserve-list li::before {
-      content: "■";
-      position: absolute;
-      left:0;
-      color: #6b8e23;
-      font-size: .8em;
-    }
-
-    .reserve-button {
-      display: inline-block;
-      background: #6b8e23;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 4px;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-    .reserve-button:hover { background: #5a7619; }
-    .contact-info { text-align: center; }
-    .contact-info p { margin: .5em 0; }
-
-    footer {
-      text-align: center;
-      font-size: .9em;
-      color: #888;
-      padding: 1rem;
-      margin-top: 2rem;
+    .decorated-paragraph em {
+      color: #777;
     }
   </style>
 </head>
@@ -192,3 +156,55 @@
       <h2>American-Raised Meat &amp; Produce<br>From Our Family to Yours</h2>
     </div>
   </header>
+
+  <section id="welcome">
+    <h2>Welcome to Waterleaf Homestead</h2>
+    <p><strong>Zanesville, Ohio • Muskingum County • Appalachian Built</strong></p>
+    <p>This is more than a farm. It is a second chance. A deep breath. A promise kept.</p>
+    <p>We are the Lincicome family, Appalachian born, veteran built, and proud to call Muskingum County home. Our journey did not begin with land or money or ease. It began with hardship that most would not see behind our smiles. Poverty. Homelessness. Violence. Silence. We moved house to house, living in hand-me-downs, scraping by on little more than hope, never staying anywhere long enough to grow roots. But deep down, we always believed we could rise.</p>
+    <p>By the time I was seven years old, I already knew life had to change. I made myself a promise, my future kids would never live the way I did. I would outwork every obstacle and climb out of that quicksand no matter what.</p>
+    <p>The military gave me structure. It gave me family. Most of all, it gave me a new beginning. I proudly served as a soldier in the 10th Mountain Division, where I learned to embrace the suck, push through hardship, and stand shoulder to shoulder with brothers who understood struggle like I did. That time changed me. It hardened the right parts and softened others. It gave me tools to fight back against the past.</p>
+    <p>But life after service came with its own battles. Divorce. Distance from my kids. Mental health spirals. Addiction. There were moments I did not know if I would make it out. But I made a decision to start over. I left the uniform behind and stepped into a new life. I remarried. I healed. I rebuilt. I found peace in the dirt and meaning in the work.</p>
+    <p>Today, we live on land that we shaped with our own hands. Every fence post. Every coop. Every morning chore. Built not with money, but with grit, calluses, and purpose. This farm is not a business. It is a legacy. A declaration that we do not just survive. We rise.</p>
+    <h2>What We Offer</h2>
+    <p>Here at Waterleaf Homestead, everything we raise is done with care and integrity. Our animals are never caged. They roam freely in open pasture. They eat well. They live clean. And they are treated with the respect every living thing deserves.</p>
+    <ul>
+      <li>Pasture-raised chickens and turkeys</li>
+      <li>Farm fresh eggs and seasonal produce</li>
+      <li>Custom meat orders with no fillers, no chemicals, and no compromise</li>
+    </ul>
+    <p>What you get from us is food the way it used to be. Real. Fresh. Honest. You can taste the difference, and you can see where it comes from. Our farm is not just a source of food, it is a source of trust.</p>
+
+    <h2>What’s Coming in 2026</h2>
+    <p>In 2026, we will begin offering small batch dairy. That includes:</p>
+    <ul>
+      <li>Raw milk</li>
+      <li>Hand churned butter</li>
+      <li>Cream, yogurt, cheese, and more</li>
+    </ul>
+    <p>Everything will be made right here, by hand, using clean processes and wholesome practices. No preservatives. No machines pumping out lifeless product. Just real dairy from animals we care for and respect.</p>
+    <p>And we will not stop there. Our plan is to begin hosting visitors. Kids. Families. Neighbors. Anyone who wants to experience real farm life, to learn how food is made, how animals are cared for, and how peace can be found in something as simple as a slow morning with cows and chickens.</p>
+
+    <h2>Outreach and Community</h2>
+    <p>Starting in 2026, our gates will open wider.</p>
+    <p>We are building a place where people can reconnect. A space to feel safe. Grounded. At peace.</p>
+    <p>We will be offering experiences for:</p>
+    <ul>
+      <li>Children who deserve joy, adventure, and something real</li>
+      <li>Veterans looking for quiet, connection, and healing</li>
+      <li>People from all walks of life who just want to breathe again</li>
+    </ul>
+    <p>Our programs will include day in the life farm tours, hands on animal care, and a seat at our table for those who just need it. Whether you are burned out, broken down, or simply curious, you are welcome here.</p>
+    <p>This homestead is where judgment stops and kindness begins. A place where the birds sing louder than the noise in your head and the land holds more peace than any therapist’s office ever could. We do not promise perfection, but we do promise truth.</p>
+
+    <h2>Our Mission</h2>
+    <p>We created Waterleaf Homestead to raise honest food, grow strong families, and give hope to anyone still in the fight.</p>
+    <p>We know what it is like to feel forgotten, alone, and like the deck is stacked against you. But we also know what happens when someone refuses to give up. This place is proof.</p>
+    <p>We are not rich in dollars. We are rich in love, in land, in laughter, and in the rhythm of a life lived on purpose. Our wealth is measured in the meals we grow, the memories we make, and the people we help along the way.</p>
+    <p>This farm exists to show that even the roughest beginnings can lead to the most beautiful places. That scars can be seeds. That pain can become peace.</p>
+    <p>And that there is always light, even when the world feels dark.</p>
+    <p><strong>So if you are looking for food that feeds your body, stories that feed your soul, or just a place to feel real again… welcome.</strong></p>
+    <p><strong>You belong here.</strong> This is Waterleaf Homestead. And we are glad you found us.</p>
+  </section>
+</body>
+</html>
