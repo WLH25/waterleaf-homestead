@@ -63,7 +63,7 @@
     .hero {
       position: relative;
       background: url('./farmers_market.jpg') center center/cover no-repeat;
-      min-height: 90vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,7 +92,7 @@
       color: #fff8dc;
     }
     section {
-      padding: 3rem 2rem;
+      padding: 2rem;
       max-width: 1100px;
       margin: auto;
       background: #fff8ee;
@@ -100,43 +100,37 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.07);
       border: 2px solid #e0c7a9;
     }
-    section h2 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 1.25rem;
-      text-transform: uppercase;
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .tab-btn {
+      padding: 10px 20px;
+      border: none;
+      background: #d8b98c;
       color: #5a3e2b;
-      border-bottom: 2px solid #d8b98c;
-      padding-bottom: .5rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-    section h3 {
-      margin-top: 2rem;
-      font-size: 1.5em;
-      border-bottom: 1px solid #d8b98c;
-      padding-bottom: .25rem;
+    .tab-btn.active {
+      background: #5a3e2b;
+      color: white;
     }
-    section p, section li {
-      font-size: 1.05em;
-      margin-bottom: .75em;
+    .tab-content {
+      display: none;
     }
-    ul {
-      padding-left: 1.5rem;
+    .tab-content.active {
+      display: block;
     }
-    .footer-note {
-      text-align: center;
-      font-style: italic;
-      margin-top: 3rem;
-      font-size: .95em;
-      color: #666;
-    }
-    .intro-message {
-      font-size: 1.05em;
-      font-style: italic;
-      background: #fff4e5;
-      padding: 1em;
-      border-left: 4px solid #d8b98c;
-      margin-bottom: 1.5em;
-      border-radius: 6px;
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -163,135 +157,139 @@
   </header>
 
   <section>
-    <h2>Why Our Meat is Different</h2>
-    <div class="intro-message">
-      Most grocery store poultry comes from birds raised in giant warehouses — never seeing sunlight, fed cheap grain, and pumped with antibiotics. Our birds live on pasture, scratch in the dirt, and grow at a natural pace. We never use cages, fillers, or shortcuts.
-      <br><br>
-      Our prices are a bit higher because they reflect the real cost of feed, pasture-based care, and certified ODA-inspected processing — not factory shortcuts. When you buy from us, you're feeding your family better and supporting a 100% disabled veteran from right here in Muskingum County.
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('turkeys')">Turkeys</button>
+      <button class="tab-btn" onclick="showTab('chickens')">Chickens</button>
+      <button class="tab-btn" onclick="showTab('eggs')">Eggs</button>
+      <button class="tab-btn" onclick="showTab('rewards')">Discounts & Rewards</button>
     </div>
 
-    <h2>Full 2025 Poultry Product Menu</h2>
-
-    <h3>Turkeys</h3>
-    <div class="intro-message">
-      <strong>Why Our Turkeys Cost More — And Why They're Worth It:</strong><br>
-      These birds are raised slowly on pasture, with no cages, fillers, or antibiotics. Every turkey supports our 100% disabled veteran-owned homestead. Inspected, vacuum-sealed, and full of real flavor — this is food you can be proud to serve.
-    </div>
-    <p>$6.25/lb (Locked with $50 deposit)</p>
-    <ul>
-      <li>Feast Bird (28–29 lbs): $175–181</li>
-      <li>Holiday King (30–32 lbs): $187–200</li>
-      <li>Crown Jewel (33–35 lbs): $206–219</li>
-    </ul>
-
-    <h3>Cut-Up Turkey Parts (Vacuum-Sealed)</h3>
-    <ul>
-      <li>2 Bone-in Breast Halves – $24</li>
-      <li>2 Thighs – $12</li>
-      <li>2 Drumsticks – $12</li>
-      <li>4 Wings (~1 lb) – $9</li>
-      <li>1 Back – $5</li>
-    </ul>
-
-    <h3>Turkey Marinades (Prepay Required)</h3>
-    <p>+ $2.75/lb add-on – 5 lb minimum per flavor<br>Flavors: Italian, Garlic-Herb</p>
-
-    <h3>Turkey Sausage & Ground</h3>
-    <ul>
-      <li>Ground Turkey – $6.75/lb</li>
-      <li>Mild Italian Patties – $7.00</li>
-      <li>Jalapeño Cheddar Patties – $8.00</li>
-      <li>Maple Patties – $7.25</li>
-    </ul>
-
-    <h3>Turkey Kits & Bundles</h3>
-    <ul>
-      <li>Stock Kit – $10</li>
-      <li>Country Breakfast Kit – $12</li>
-      <li>White Meat Pack – $34</li>
-      <li>Grill Pack – $32</li>
-      <li>Everything But the Bird – $65</li>
-      <li>Family Feast Bundle – $70</li>
-    </ul>
-
-    <h3>Chickens – Ready in October</h3>
-    <div class="intro-message">
-      <strong>Why Our Chicken Isn’t Cheap — But It's Real:</strong><br>
-      Raised on pasture with no antibiotics or confinement, our chickens live like chickens should. Inspected, vacuum-sealed, and truly farm-raised — this is clean, honest food from a local family you can trust.
-    </div>
-    <p>Whole Chickens – $4.75/lb (avg 4.5–6.5 lbs)</p>
-
-    <h3>Cut Style A: All Cuts Combo (Boneless/Skinless)</h3>
-    <ul>
-      <li>2 B/S Breast Halves</li>
-      <li>2 Thighs</li>
-      <li>2 Drumsticks</li>
-      <li>1 lb Party Wings</li>
-      <li>1 Soup Pack</li>
-      <li><strong>Price: $33</strong></li>
-    </ul>
-
-    <h3>Cut Style B: 8-Piece Bone-In Birds</h3>
-    <ul>
-      <li>2 Bone-in Breast Halves</li>
-      <li>2 Thighs</li>
-      <li>2 Drumsticks</li>
-      <li>2 Wings</li>
-      <li><strong>Estimated: $28–$30</strong></li>
-    </ul>
-
-    <h3>Cut-Up Chicken Parts</h3>
-    <ul>
-      <li>Breast Halves (2/pk) – $9.00</li>
-      <li>Thighs (2/pk) – $6.00</li>
-      <li>Drumsticks (2/pk) – $5.25</li>
-      <li>Party Wings (1 lb) – $5.00</li>
-      <li>Soup Pack – $4.25</li>
-    </ul>
-
-    <h3>Chicken Marinades (Prepay Only)</h3>
-    <p>+ $2.50/lb add-on – 5 lb minimum per flavor<br>Flavors: Garlic-Herb, Lemon Garlic, Italian</p>
-
-    <h3>Chicken Bundles</h3>
-    <ul>
-      <li>Grill Box – $17</li>
-      <li>Family Chicken Pack – $25</li>
-      <li>Wing Night Bundle – $10</li>
-      <li>All Cuts Combo – $33</li>
-    </ul>
-
-    <h3>Farm-Fresh Eggs</h3>
-    <p>$5/dozen<br><strong>FREE dozen with any 5+ sausage packs</strong></p>
-
-    <h2>Bonus Incentives</h2>
-    <div class="intro-message">
-      <strong>Farm-Fresh Rewards:</strong><br>
-      <ul>
-        <li><strong>$150+</strong>: FREE dozen eggs + $5 off</li>
-        <li><strong>$250+</strong>: FREE Stock Kit + $10 off</li>
-        <li><strong>$350+</strong>: FREE Country Breakfast Kit + $15 off</li>
-        <li><strong>$450+</strong>: FREE Grill Pack + $20 off</li>
-        <li><strong>$500+</strong>: VIP Loyalty — 5% off all future orders for 12 months</li>
-      </ul>
-      <em>Applies to single purchases only. Someoffers may vary by availability.</em>
+    <div id="turkeys" class="tab-content active">
+      <details open>
+        <summary>Whole Turkeys</summary>
+        <p>$6.25/lb (Locked with $50 deposit)</p>
+        <ul>
+          <li>Feast Bird (28–29 lbs): $175–181</li>
+          <li>Holiday King (30–32 lbs): $187–200</li>
+          <li>Crown Jewel (33–35 lbs): $206–219</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Cut-Up Parts</summary>
+        <ul>
+          <li>2 Breast Halves – $24</li>
+          <li>2 Thighs – $12</li>
+          <li>2 Drumsticks – $12</li>
+          <li>4 Wings – $9</li>
+          <li>1 Back – $5</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Marinades</summary>
+        <p>+ $2.75/lb add-on – 5 lb minimum<br>Flavors: Italian, Garlic-Herb</p>
+      </details>
+      <details>
+        <summary>Sausage & Ground</summary>
+        <ul>
+          <li>Ground – $6.75/lb</li>
+          <li>Mild Italian – $7.00</li>
+          <li>Jalapeño Cheddar – $8.00</li>
+          <li>Maple Patties – $7.25</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Turkey Bundles</summary>
+        <ul>
+          <li>Stock Kit – $10</li>
+          <li>Country Breakfast Kit – $12</li>
+          <li>White Meat Pack – $34</li>
+          <li>Grill Pack – $32</li>
+          <li>Everything But the Bird – $65</li>
+          <li>Family Feast – $70</li>
+        </ul>
+      </details>
     </div>
 
-    <h2>Service Discount</h2>
-    <div class="intro-message">
-      <strong>We proudly support those who serve.</strong><br>
-      All military, veterans, law enforcement, firefighters, and EMS personnel receive:<br>
-      <strong>➡️ 10% off your entire order</strong><br>
-      (with valid ID shown at pickup).<br>
-      <em>This offer is not stackable with other tiered discounts but always honored.</em>
+    <div id="chickens" class="tab-content">
+      <p>Whole Chickens – $4.75/lb (avg 4.5–6.5 lbs)</p>
+      <details>
+        <summary>Cut Style A (Boneless/Skinless)</summary>
+        <ul>
+          <li>2 Breast Halves</li>
+          <li>2 Thighs</li>
+          <li>2 Drumsticks</li>
+          <li>1 lb Party Wings</li>
+          <li>1 Soup Pack – $33</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Cut Style B (8-Piece Bone-In)</summary>
+        <ul>
+          <li>2 Breast Halves</li>
+          <li>2 Thighs</li>
+          <li>2 Drumsticks</li>
+          <li>2 Wings – $28–$30</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Cut-Up Parts</summary>
+        <ul>
+          <li>Breast – $9</li>
+          <li>Thighs – $6</li>
+          <li>Drumsticks – $5.25</li>
+          <li>Wings – $5</li>
+          <li>Soup Pack – $4.25</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Marinades & Bundles</summary>
+        <p>+ $2.50/lb add-on – 5 lb minimum<br>Flavors: Garlic-Herb, Lemon Garlic, Italian</p>
+        <ul>
+          <li>Grill Box – $17</li>
+          <li>Family Pack – $25</li>
+          <li>Wing Night – $10</li>
+          <li>All Cuts Combo – $33</li>
+        </ul>
+      </details>
     </div>
 
-    <div class="footer-note">
-      <strong>Coming in 2026:</strong><br>
-      Raw milk, churned butter, yogurts, cheeses, and hands-on family farm events.
+    <div id="eggs" class="tab-content">
+      <p>Farm-Fresh Eggs – $5/dozen</p>
+      <p><strong>FREE dozen</strong> with any 5+ sausage packs</p>
+    </div>
+
+    <div id="rewards" class="tab-content">
+      <details open>
+        <summary>Farm-Fresh Rewards</summary>
+        <ul>
+          <li>$150+: FREE dozen eggs + $5 off</li>
+          <li>$250+: FREE Stock Kit + $10 off</li>
+          <li>$350+: FREE Country Breakfast Kit + $15 off</li>
+          <li>$450+: FREE Grill Pack + $20 off</li>
+          <li>$500+: VIP Loyalty — 5% off future orders</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Service Discount</summary>
+        <p>10% off for military, veterans, law enforcement, firefighters, and EMS (with valid ID). Not stackable with other offers.</p>
+      </details>
+      <details>
+        <summary>Coming in 2026</summary>
+        <p>Raw milk, churned butter, yogurts, cheeses, and hands-on farm experiences.</p>
+      </details>
     </div>
   </section>
+
+  <script>
+    function showTab(id) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-btn');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
-</body>
-</html>
