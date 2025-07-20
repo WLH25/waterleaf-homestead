@@ -10,8 +10,21 @@
     body {
       font-family: 'Lato', sans-serif;
       color: #2c2c2c;
-      background: #f9f5f0 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+      background: none;
+      position: relative;
       line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      background: url('farmers_market.jpg') center center/cover no-repeat;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      z-index: -1;
     }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Rancho', cursive;
@@ -58,36 +71,10 @@
     nav a:hover {
       color: #6b8e23;
     }
-    .hero {
-      background: url('farmers_market.jpg') center center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      color: #fffdf7;
-    }
-    .hero-content h2 {
-      font-size: 3em;
-      text-shadow: 2px 2px 6px #000;
-      text-transform: uppercase;
-    }
     section {
       max-width: 1100px;
       margin: 2rem auto;
-      background: #fff8ee;
+      background: rgba(255, 248, 238, 0.85);
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.07);
@@ -143,12 +130,6 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Real Food. Raised Right.</h2>
-    </div>
-  </section>
-
   <section>
     <div class="tabs">
       <button class="tab-btn active" onclick="showTab('turkeys')">Turkeys</button>
@@ -159,101 +140,57 @@
 
     <div id="turkeys" class="tab-content active">
       <details open>
-        <summary>Whole Turkeys</summary>
-        <p>$6.25/lb (Locked with $50 deposit)</p>
+        <summary>▼ Whole Turkeys</summary>
         <ul>
+          <li>$6.25/lb (Locked with $50 deposit)</li>
           <li>Feast Bird (28–29 lbs): $175–181</li>
           <li>Holiday King (30–32 lbs): $187–200</li>
-          <li>Crown Jewel (33–35 lbs): $206–219</li>
+          <li>Custom or Show Toms (33–36+ lbs): $210+</li>
         </ul>
       </details>
       <details>
-        <summary>Cut-Up Parts</summary>
+        <summary>▼ Add-Ons</summary>
         <ul>
-          <li>2 Breast Halves – $24</li>
-          <li>2 Thighs – $12</li>
-          <li>2 Drumsticks – $12</li>
-          <li>4 Wings – $9</li>
-          <li>1 Back – $5</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Marinades</summary>
-        <p>+ $2.75/lb add-on – 5 lb minimum<br>Flavors: Italian, Garlic-Herb</p>
-      </details>
-      <details>
-        <summary>Sausage & Ground</summary>
-        <ul>
-          <li>Ground – $6.75/lb</li>
-          <li>Mild Italian – $7.00</li>
-          <li>Jalapeño Cheddar – $8.00</li>
-          <li>Maple Patties – $7.25</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Turkey Bundles</summary>
-        <ul>
-          <li>Stock Kit – $10</li>
-          <li>Country Breakfast Kit – $12</li>
-          <li>White Meat Pack – $34</li>
-          <li>Grill Pack – $32</li>
-          <li>Everything But the Bird – $65</li>
-          <li>Family Feast – $70</li>
+          <li>Marinade Pack – $8</li>
+          <li>Herb Butter Rub – $5</li>
+          <li>Local Hickory Brining Kit – $12</li>
         </ul>
       </details>
     </div>
 
     <div id="chickens" class="tab-content">
-      <p>Whole Chickens – $4.75/lb (avg 4.5–6.5 lbs)</p>
-      <details>
-        <summary>Cut Style A (Boneless/Skinless)</summary>
+      <details open>
+        <summary>▼ Whole Chickens</summary>
         <ul>
-          <li>2 Breast Halves</li>
-          <li>2 Thighs</li>
-          <li>2 Drumsticks</li>
-          <li>1 lb Party Wings</li>
-          <li>1 Soup Pack – $33</li>
+          <li>$4.75/lb (Locked with $25 deposit)</li>
+          <li>Typical Bird: 4–6.5 lbs ($19–31)</li>
+          <li>Family 3-Pack (3 birds): $82 (avg 5.75 lbs each)</li>
         </ul>
       </details>
       <details>
-        <summary>Cut Style B (8-Piece Bone-In)</summary>
+        <summary>▼ Chicken Add-Ons</summary>
         <ul>
-          <li>2 Breast Halves</li>
-          <li>2 Thighs</li>
-          <li>2 Drumsticks</li>
-          <li>2 Wings – $28–$30</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Cut-Up Parts</summary>
-        <ul>
-          <li>Breast – $9</li>
-          <li>Thighs – $6</li>
-          <li>Drumsticks – $5.25</li>
-          <li>Wings – $5</li>
-          <li>Soup Pack – $4.25</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Marinades & Bundles</summary>
-        <p>+ $2.50/lb add-on – 5 lb minimum<br>Flavors: Garlic-Herb, Lemon Garlic, Italian</p>
-        <ul>
-          <li>Grill Box – $17</li>
-          <li>Family Pack – $25</li>
-          <li>Wing Night – $10</li>
-          <li>All Cuts Combo – $33</li>
+          <li>Garlic Butter Pack – $4</li>
+          <li>BBQ Rub & Smoked Salt Combo – $6</li>
         </ul>
       </details>
     </div>
 
     <div id="eggs" class="tab-content">
-      <p>Farm-Fresh Eggs – $5/dozen</p>
-      <p><strong>FREE dozen</strong> with any 5+ sausage packs</p>
+      <details open>
+        <summary>▼ Farm-Fresh Eggs</summary>
+        <ul>
+          <li>$4.50/dozen</li>
+          <li>$5.00/dozen — pasture premium</li>
+          <li>3 dozen or more: $4/dozen</li>
+        </ul>
+      </details>
+      <p><em>Note: Availability varies weekly. Preorder for pickup or local delivery.</em></p>
     </div>
 
     <div id="rewards" class="tab-content">
       <details open>
-        <summary>Farm-Fresh Rewards</summary>
+        <summary>▼ Farm-Fresh Rewards</summary>
         <ul>
           <li>$150+: FREE dozen eggs + $5 off</li>
           <li>$250+: FREE Stock Kit + $10 off</li>
@@ -263,11 +200,11 @@
         </ul>
       </details>
       <details>
-        <summary>Service Discount</summary>
+        <summary>▼ Service Discount</summary>
         <p>10% off for military, veterans, law enforcement, firefighters, and EMS (with valid ID). Not stackable with other offers.</p>
       </details>
       <details>
-        <summary>Coming in 2026</summary>
+        <summary>▼ Coming in 2026</summary>
         <p>Raw milk, churned butter, yogurts, cheeses, and hands-on farm experiences.</p>
       </details>
     </div>
