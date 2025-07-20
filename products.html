@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products – Waterleaf Homestead</title>
   <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Lato', sans-serif;
       color: #2c2c2c;
-      line-height: 1.6;
       background: #f9f5f0 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+      line-height: 1.6;
     }
     h1, h2, h3, h4, h5, h6 {
-      margin: 0;
       font-family: 'Rancho', cursive;
       color: #5a3e2b;
     }
@@ -23,7 +21,9 @@
       color: #5a3e2b;
       text-decoration: none;
     }
-    a:hover { text-decoration: underline; }
+    a:hover {
+      text-decoration: underline;
+    }
     #top-header {
       background: #5a3e2b url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
       text-align: center;
@@ -32,12 +32,10 @@
     }
     #top-header h1 {
       font-size: 3.2em;
-      margin-bottom: .2em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
       color: #5a9587;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
     #top-header .tagline {
-      font-weight: 400;
       font-size: 1.35em;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     }
@@ -56,45 +54,41 @@
     nav a {
       margin: 0 1.5rem;
       font-weight: 700;
-      color: #5a3e2b;
-      text-decoration: none;
     }
-    nav a:hover { color: #6b8e23; }
+    nav a:hover {
+      color: #6b8e23;
+    }
     .hero {
-      position: relative;
-      background: url('4afefe3b-68e4-46a5-97e3-6c7a2de8e6ef.png') center center/cover no-repeat;
-      min-height: 60vh;
+      background: url('farmers_market.jpg') center center/cover no-repeat;
+      height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
       text-align: center;
     }
     .hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
     }
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 800px;
-      padding: 1rem;
+      color: #fffdf7;
     }
     .hero-content h2 {
       font-size: 3em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      line-height: 1.4;
       text-shadow: 2px 2px 6px #000;
-      color: #fffdf7;
+      text-transform: uppercase;
     }
     section {
-      padding: 2rem;
       max-width: 1100px;
-      margin: auto;
+      margin: 2rem auto;
       background: #fff8ee;
+      padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.07);
       border: 2px solid #e0c7a9;
@@ -102,8 +96,8 @@
     .tabs {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 1rem;
+      flex-wrap: wrap;
       margin-bottom: 2rem;
     }
     .tab-btn {
@@ -134,26 +128,26 @@
   </style>
 </head>
 <body>
-  <div id="top-header">
+  <header id="top-header">
     <h1>Waterleaf Homestead</h1>
     <p class="tagline">
       <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" alt="US flag">
       Veteran-Owned &nbsp;|&nbsp; Zanesville, OH &nbsp;|&nbsp; No Cages. No Fillers. Just Real Food.
     </p>
-  </div>
+  </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="#">Products</a>
+    <a href="#" class="active">Products</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <header class="hero">
+  <section class="hero">
     <div class="hero-content">
       <h2>Real Food. Raised Right.</h2>
     </div>
-  </header>
+  </section>
 
   <section>
     <div class="tabs">
@@ -279,7 +273,7 @@
     </div>
   </section>
 
- <script>
+  <script>
     function showTab(id) {
       const tabs = document.querySelectorAll('.tab-content');
       const buttons = document.querySelectorAll('.tab-btn');
