@@ -15,39 +15,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const products = {
-    turkeys: window.turkeyContent,
-    chickens: window.chickenContent,
-    eggs: window.eggContent,
-    rewards: window.rewardsContent,
-    market: window.marketContent
-  };
-
-  for (const id in products) {
+  for (const id in productData) {
+    const section = productData[id];
     const container = document.getElementById(id);
-    if (container && products[id]) {
-      container.innerHTML = renderTab(products[id]);
+    if (container && section) {
+      container.innerHTML = renderTab(section);
     }
   }
 });
 
-function renderTab({ intro, benefits = [], menu = "" }) {
+function renderTab({ intro, health = [], menu = [] }) {
   let html = '';
 
   if (intro) {
     html += `<div class="intro-message">${intro}</div>`;
   }
 
-  if (benefits.length) {
+  if (health.length) {
     html += `<div class="health-benefits"><h3>Why This Matters</h3><ul>`;
-    benefits.forEach(b => {
-      html += `<li>${b}</li>`;
+    health.forEach(item => {
+      html += `<li>${item}</li>`;
     });
     html += `</ul></div>`;
   }
 
-  if (menu) {
-    html += `<details><summary>View Full Menu</summary>${menu}</details>`;
+  if (menu.length) {
+    html += `<details><summary>View Full Menu</summary>`;
+    menu.forEach(section => {
+      html += `<h4>${section.title}</h4>`;
+      if (section.note) html += `<p><em>${section.note}</em></p>`;
+      if (section.items && section.items.length) {
+        html += `<ul>`;
+        section.items.forEach(item => {
+          html += `<li>${item}</li>`;
+        });
+        html += `</ul>`;
+      }
+    });
+    html += `</details>`;
   }
 
   return html;
